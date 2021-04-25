@@ -1,6 +1,4 @@
-# Notify (No Junk) Loot Filter
-
-## Description
+## Notify (No Junk) Loot Filter
 This loot filter highlights a few items and minimally filters out drops that no one would ever use. I created this filter with the intention to fill a few gaps with the default highlighting rules while still leaving the default experiance mostly unchanged.
 
 This filter has been tested with Season 2, newer seasons may or may not work.
