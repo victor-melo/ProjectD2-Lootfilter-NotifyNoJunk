@@ -17,7 +17,7 @@ This filter has been tested with Season 2, newer seasons may or may not work.
 ## Hide Junk
 * Hide Arrows & Bolts after reaching Level 15.
 * Hide Chipped & Flawed gems after reaching level 50.
-* Hide Inferior items (Damaged, Cracked, etc..) except for class specific items (Druid Pelts, Sorc Wands).
+* Hide Inferior items (Damaged, Cracked, etc..) except for class specific items (Druid Pelts, Sorc Wands, etc..).
 * Hide Throwing Potions (Fulminating Potion, Exploding Potion, Oil Potion, Strangling Potion, Choking Potion, Rancid Potion).
 
 ## Notifications and map icon on the following item drops:
