@@ -1,0 +1,172 @@
+
+//// Changes ////
+// Show Ethereal Items on ground
+// Show Socketted Items on ground
+// Show Ethereal & Socketted Items on ground
+// Highlight Flawless & Perfect Gems on ground (Red)
+// Highlight Full Rejuvenation Potion on ground (Purple)
+// Highlight Charms & Jewels (Dark Green)
+// Highlight Runes With their numbers, Notify on AMN rune or above
+// Hide Arrows & Bolts past Level 15
+// Hide Chipped & Flawed gems past level 50
+// Hide Inferior items (Damanged, Cracked, etc..) except for class specific items (Druid Pelts, Sorc Wands)
+// Hide Throwing Potions (Fulminating Potion, Exploding Potion, Oil Potion, Strangling Potion, Choking Potion, Rancid Potion)
+
+//////////////////////////////////////
+////      Charms/Jewels/Runes     ////
+//////////////////////////////////////
+
+// Charms
+ItemDisplay[(MAG cm1) OR (MAG cm2) OR (MAG cm3)]:%DARK_GREEN%%NAME%
+
+// Jewels
+ItemDisplay[MAG jew]:%DARK_GREEN%%NAME%
+
+// Runes
+ItemDisplay[r01 OR r01s]:%ORANGE%%NAME% (%RUNENUM%)
+ItemDisplay[r02 OR r02s]:%ORANGE%%NAME% (%RUNENUM%)
+ItemDisplay[r03 OR r03s]:%ORANGE%%NAME% (%RUNENUM%)
+ItemDisplay[r04 OR r04s]:%ORANGE%%NAME% (%RUNENUM%) 
+ItemDisplay[r05 OR r05s]:%ORANGE%%NAME% (%RUNENUM%)
+ItemDisplay[r06 OR r06s]:%ORANGE%%NAME% (%RUNENUM%) 
+ItemDisplay[r07 OR r07s]:%ORANGE%%NAME% (%RUNENUM%) 
+ItemDisplay[r08 OR r08s]:%ORANGE%%NAME% (%RUNENUM%)  
+ItemDisplay[r09 OR r09s]:%ORANGE%%NAME% (%RUNENUM%)  
+ItemDisplay[r10 OR r10s]:%ORANGE%%NAME% (%RUNENUM%)  
+ItemDisplay[r11 OR r11s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% 
+ItemDisplay[r12 OR r12s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% 
+ItemDisplay[r13 OR r13s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% 
+ItemDisplay[r14 OR r14s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% 
+ItemDisplay[r15 OR r15s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% 
+ItemDisplay[r16 OR r16s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% 
+ItemDisplay[r17 OR r17s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% 
+ItemDisplay[r18 OR r18s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% 
+ItemDisplay[r19 OR r19s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% 
+ItemDisplay[r20 OR r20s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% 
+ItemDisplay[r21 OR r21s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% 
+ItemDisplay[r22 OR r22s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% 
+ItemDisplay[r23 OR r23s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% 
+ItemDisplay[r24 OR r24s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% 
+ItemDisplay[r25 OR r25s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% 
+ItemDisplay[r26 OR r26s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% 
+ItemDisplay[r27 OR r27s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% 
+ItemDisplay[r28 OR r28s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% 
+ItemDisplay[r29 OR r29s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% 
+ItemDisplay[r30 OR r30s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% 
+ItemDisplay[r31 OR r31s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% 
+ItemDisplay[r32 OR r32s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% 
+ItemDisplay[r33 OR r33s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% 
+//////////////////////////////////////
+////             Gems             ////
+//////////////////////////////////////
+
+// Amethyst
+ItemDisplay[gzv OR gzvs]: %RED%%NAME% 
+ItemDisplay[gpv OR gpvs]: %RED%%NAME% 
+
+// Diamond
+ItemDisplay[glw OR glws]: %RED%%NAME% 
+ItemDisplay[gpw OR gpws]: %RED%%NAME% 
+
+// Emerald
+ItemDisplay[glg OR glgs]: %RED%%NAME% 
+ItemDisplay[gpg OR gpgs]: %RED%%NAME% 
+
+// Ruby
+ItemDisplay[glr OR glrs]: %RED%%NAME% 
+ItemDisplay[gpr OR gprs]: %RED%%NAME% 
+
+// Sapphire
+ItemDisplay[glb OR glbs]: %RED%%NAME% 
+ItemDisplay[gpb OR gpbs]: %RED%%NAME% 
+
+// Skull
+ItemDisplay[skl OR skls]: %RED%%NAME% 
+ItemDisplay[skz OR skzs]: %RED%%NAME% 
+
+// Topaz
+ItemDisplay[gly OR glys]: %RED%%NAME% 
+ItemDisplay[gpy OR gpys]: %RED%%NAME% 
+
+//////////////////////////////////////
+//// Socketted and ethereal Items ////
+//////////////////////////////////////
+
+// Show Sockets
+ItemDisplay[SOCK>0]: %NAME% + %TAN%%SOCKETS%
+
+// Show Ethereal
+ItemDisplay[ETH AND SOCK=0]: %NAME% + %GRAY%Eth:%TAN%0
+
+// Show Ethereal with sockets
+ItemDisplay[ETH AND SOCK>0]: %NAME% + %GRAY%Eth:%TAN%%SOCKETS%
+
+//////////////////////////////////////
+////            Potions           ////
+//////////////////////////////////////
+
+// Highlight Full Rejuvenation Potion 
+ItemDisplay[rvl]: %PURPLE%%NAME%
+
+//////////////////////////////////////
+////           Hide Junk          ////
+//////////////////////////////////////
+
+// Hide Arrows & Bolts past normal difficulty
+ItemDisplay[(aqv CLVL>15) OR (cqv CLVL>15)]: {%NAME%}
+
+//// Hide Lower Quality Gems
+
+// Hide all chipped gems past level 50
+ItemDisplay[GEM=1 CLVL>50]:{%NAME%}
+
+// Hide all Flawed gems past level 50
+ItemDisplay[GEM=2 CLVL>50]: {%NAME%}
+
+// Hide Inferior Items, except class specific ones
+ItemDisplay[INF !(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON)]: {%NAME%}
+
+// Hide Throwing Potions (Fulminating Potion, Exploding Potion, Oil Potion, Strangling Potion, Choking Potion, Rancid Potion)
+ItemDisplay[opl OR opm OR ops OR gpl OR gpm OR gps]: {%NAME%}
+
+//////////////////////////////////////
+////     Extra Notifications      ////
+//////////////////////////////////////
+
+ItemDisplay[UNI !ID]: %NAME% %MAP-A5%
+ItemDisplay[SET !ID]: %NAME% %MAP-A5%
+
+// Notify on Charm Drops
+ItemDisplay[MAG cm1 !ID]: %NAME% %MAP-A5% 
+ItemDisplay[MAG cm2 !ID]: %NAME% %MAP-A5%
+ItemDisplay[MAG cm3 !ID]: %NAME% %MAP-A5%
+
+// Notify on Jewls Drops
+ItemDisplay[jew !ID]: %NAME%%MAP-A5%
+
+//// Notify on Various Rare Drops
+// Rare Class Specific Items
+ItemDisplay[RARE !ID (CL1 OR CL2 OR CL3 OR CL4 OR CL5 OR CL6 OR CL7)]: %NAME%%MAP-A5%
+//ItemDisplay[RARE !ID (DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON)]: %NAME%%MAP-A5%
+
+// Rare Jewelry
+ItemDisplay[RARE !ID (rin OR amu OR jew)]: %NAME%%MAP-A5%
+
+// Rare Boots
+ItemDisplay[RARE !ID EQ5]: %NAME%%MAP-A5%
+//ItemDisplay[RARE !ID (lbt OR vbt OR mbt OR tbt OR hbt OR xlb OR xvb OR xmb OR xtb OR xhb OR ulb OR uvb OR umb OR utb OR uhb)]: %NAME%%MAP-A5%
+
+// Rare Gloves
+ItemDisplay[RARE !ID EQ4]: %NAME%%MAP-A5%
+//ItemDisplay[RARE !ID (lgl OR vgl OR mgl OR tgl OR hgl OR xlg OR xvg OR xmg OR xtg OR xhg OR ulg OR uvg OR umg OR utg OR uhg)]: %NAME%%MAP-A5%
+
+// Rare Belts
+ItemDisplay[RARE !ID EQ6]: %NAME%%MAP-A5%
+//ItemDisplay[RARE !ID (lbl OR vbl OR mbl OR tbl OR hbl OR zlb OR zvb OR zmb OR ztb OR zhb OR ulc OR uvc OR umc OR utc OR uhc)]: %NAME%%MAP-A5%
+
+// Rare Ciclets
+ItemDisplay[RARE !ID EQ7]: %NAME%%MAP-A5%
+
+// Leave everything else
+ItemDisplay[]: %NAME%
+
