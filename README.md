@@ -7,12 +7,19 @@ This filter has been tested with Season 2, newer seasons may or may not work.
 
 ## Enchanced ground display
 * Show Ethereal & Socketed Items on ground
+* Show a little red plus sign on all elite items with more than 2 sockets
+* Dollar sign icon added to most items that have a sell price of $35000
+* Elite craftable bases will have an orange plus sign
 
 ## New Highlights
 * Flawless & Perfect Gems on ground (Red).
 * Full Rejuvenation Potion on ground (Purple).
 * Charms & Jewels (Dark Green).
 * Runes with their rune number (Orange). Similar to the stock configuration but also notify on AMN rune or above.
+
+## Added Item Descriptions
+* Added sell price to most items
+* Added crafting recipes to craftable elite/exceptional magic items
 
 ## Hide Junk
 * Hide Arrows & Bolts after reaching Level 15.
@@ -26,8 +33,10 @@ This filter has been tested with Season 2, newer seasons may or may not work.
 * Charms
 * Jewels
 * Rare class specific items (Sorceress Wands, Druid Pelts, etc.)
-* Rare Gloves, Boots, Belths
+* Rare Gloves, Boots, Belts
 * Runedrops AMN or higher
+* All PD2 Items (Worldstone Shards, Larzuk's Puzzle Box, etc)
+* Map Drops
 
 # How To Install
 1. Copy NotifyNoJunk.filter to your "ProjectD2\filters\local" Path
