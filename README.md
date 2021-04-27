@@ -18,6 +18,7 @@ This filter has been tested with Season 2, newer seasons may or may not work.
 * Runes with their rune number (Orange). Similar to the stock configuration but also notify on AMN rune or above.
 
 ## Added Item Descriptions
+* Added Item Level to all items
 * Added sell price to most items
 * Added crafting recipes to craftable elite/exceptional magic items
 
