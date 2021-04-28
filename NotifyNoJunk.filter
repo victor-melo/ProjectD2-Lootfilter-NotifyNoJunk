@@ -1,4 +1,3 @@
-
 // Add a $ sign to item names if they sell for 35000 GOLD
 ItemDisplay[PRICE=35000 AND NMAG AND (NORM OR EXC OR ELT) AND SOCK=0 AND !ETH]: %GREEN%$ %WHITE%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}%CONTINUE%
 ItemDisplay[PRICE=35000 AND NMAG AND (NORM OR EXC OR ELT) AND (SOCK>0 OR ETH)]: %GREEN%$ %GRAY%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}%CONTINUE%
@@ -67,7 +66,7 @@ ItemDisplay[ELT MAG AND EQ5]: %ORANGE%+ %NAME%{%NAME%}
 ItemDisplay[EXC MAG AND EQ5]: %NAME%{%NAME%}
 
 // Gloves
-ItemDisplay[(ELT OR EXC) MAG AND EQ4]: %BLUE%%NAME%{%TAN%Blood: Ruby & nef%NL%Caster: Amethyst & ort%NL%Power: Sapphire & ral%NL%Safety: Emerald & ral%NL%%WHITE%Sell Price: $%PRICE% %NL%Item Level: %ILVL%}%CONTINUE%
+ItemDisplay[(ELT OR EXC) MAG AND EQ4]: %BLUE%%NAME%{%TAN%Blood: Ruby & nef%NL%Caster: Amethyst & ort%NL%Power: Sapphire & ort%NL%Safety: Emerald & ral%NL%%WHITE%Sell Price: $%PRICE% %NL%Item Level: %ILVL%}%CONTINUE%
 ItemDisplay[ELT MAG AND EQ4]: %ORANGE%+ %NAME%{%NAME%}
 ItemDisplay[EXC MAG AND EQ4]: %NAME%{%NAME%}
 
