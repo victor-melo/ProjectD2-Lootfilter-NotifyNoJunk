@@ -4,7 +4,22 @@ ItemDisplay[(PRICE=35000 AND DIFF=2) OR (PRICE=30000 AND DIFF=1) OR (PRICE=25000
 ItemDisplay[!ID AND (PRICE=35000 AND DIFF=2) OR (PRICE=30000 AND DIFF=1) OR (PRICE=25000 AND DIFF=0) AND MAG]: %GREEN%$ %BLUE%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}%CONTINUE%
 ItemDisplay[!ID AND (PRICE=35000 AND DIFF=2) OR (PRICE=30000 AND DIFF=1) OR (PRICE=25000 AND DIFF=0) AND RARE]: %GREEN%$ %YELLOW%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}%CONTINUE%
 ItemDisplay[!ID AND (PRICE=35000 AND DIFF=2) OR (PRICE=30000 AND DIFF=1) OR (PRICE=25000 AND DIFF=0) AND SET]: %GREEN%$ %NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}%CONTINUE%
-//ItemDisplay[PRICE=35000 AND CRAFT]: %GREEN%$ %ORANGE%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}%CONTINUE%
+
+//////////////////////////////////////
+//// Socketed and ethereal Items ////
+//////////////////////////////////////
+
+// Show Runewords as normal
+ItemDisplay[RW AND !UNI AND !MAG AND !RARE AND !SET AND !CRAFT]: %GRAY%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+
+// Show Sockets
+ItemDisplay[!ETH AND SOCK>0]: %NAME% + %TAN%%SOCKETS%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}%CONTINUE%
+
+// Show Ethereal
+ItemDisplay[ETH AND SOCK=0]: %NAME% + %GRAY%Eth{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}%CONTINUE%
+
+// Show Ethereal with sockets
+ItemDisplay[ETH AND SOCK>0]: %NAME% + %GRAY%Eth:%TAN%%SOCKETS%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}%CONTINUE%
 
 //////////////////////////////////////
 ////      Charms/Jewels/Runes     ////
@@ -56,8 +71,8 @@ ItemDisplay[r33 OR r33s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price:
 //////////////////////////////////////
 
 // Highlight exceptional gear with at least 2 open sockets
-ItemDisplay[ELT AND SOCK>1 AND !RW AND !ETH]: %RED% + %GRAY%%NAME% + %TAN%%SOCKETS% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[ELT AND SOCK>1 AND !RW AND ETH]: %RED% + %GRAY%%NAME% + %GRAY%Eth:%TAN%%SOCKETS% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[ELT AND SOCK>1 AND !RW AND !ETH AND !UNI AND !MAG AND !RARE AND !SET AND !CRAFT]: %RED% + %GRAY%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[ELT AND SOCK>1 AND !RW AND ETH AND !UNI AND !MAG AND !RARE AND !SET AND !CRAFT]: %RED% + %GRAY%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
 // Highlight exceptional magic gear for crafting bases, and add crafting recipes in the description of both exceptional & elite magic items
 // Boots
@@ -139,22 +154,6 @@ ItemDisplay[gly OR glys]: %RED%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Leve
 ItemDisplay[gpy OR gpys]: %RED%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
 //////////////////////////////////////
-//// Socketed and ethereal Items ////
-//////////////////////////////////////
-
-// Show Runewords as normal
-ItemDisplay[RW]: %GRAY%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-
-// Show Sockets
-ItemDisplay[SOCK>0]: %NAME% + %TAN%%SOCKETS%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-
-// Show Ethereal
-ItemDisplay[ETH AND SOCK=0]: %NAME% + %GRAY%Eth:%TAN%0{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-
-// Show Ethereal with sockets
-ItemDisplay[ETH AND SOCK>0]: %NAME% + %GRAY%Eth:%TAN%%SOCKETS%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-
-//////////////////////////////////////
 ////            Potions           ////
 //////////////////////////////////////
 
@@ -181,6 +180,9 @@ ItemDisplay[INF !(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON)]: {%NAME% %NL% 
 
 // Hide Throwing Potions (Fulminating Potion, Exploding Potion, Oil Potion, Strangling Potion, Choking Potion, Rancid Potion)
 ItemDisplay[opl OR opm OR ops OR gpl OR gpm OR gps]: {%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
+
+// Hide Antidote, Thawing and stamina potion after level 50
+ItemDisplay[CLVL>50 AND (yps OR wms OR vps)]: {%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
 
 //////////////////////////////////////
 ////     Extra Notifications      ////
@@ -213,7 +215,7 @@ ItemDisplay[RARE !ID EQ4]: %NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item 
 // Rare Belts
 ItemDisplay[RARE !ID EQ6]: %NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
-// Rare Ciclets
+// Rare Circlets
 ItemDisplay[RARE !ID EQ7]: %NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
 // Notify on Project Diablo specific items (Not Maps)
