@@ -185,6 +185,28 @@ ItemDisplay[opl OR opm OR ops OR gpl OR gpm OR gps]: {%NAME% %NL% %WHITE%Sell Pr
 ItemDisplay[CLVL>50 AND (yps OR wms OR vps)]: {%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
 
 //////////////////////////////////////
+////  Hide Junk (After level 80)  ////
+//////////////////////////////////////
+//
+// The assumption here is once you hit level 80, you will be mapping and unfortunately maps drop way too much junk/ 
+// The intention here is to hide most of the junk to make it easier to actually pick up the stuff you want.
+
+// Hide all healing/mana potions (Except Full Rejuvenation Potions)
+ItemDisplay[CLVL>80 AND DIFF=2 AND (rvs OR hp1 OR hp2 OR hp3 OR hp4 OR hp5 OR mp1 OR mp2 OR mp3 OR mp4 OR mp5)]: {%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
+
+// Hide all basic white exceptional and normal items, with less than 2 sockets
+ItemDisplay[CLVL>80 AND NMAG (NORM OR EXC) AND SOCK<2 AND !UNI AND !MAG AND !SET AND !RARE AND !CRAFT AND !PRICE=35000]: {%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
+
+// Hide Elite items with 1 sockets
+ItemDisplay[CLVL>80 AND NMAG AND ELT AND SOCK=1 AND !UNI AND !MAG AND !SET AND !RARE AND !CRAFT AND !PRICE=35000]: {%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
+
+// Hide Mid tier gems eg: Ruby, Sapphire, etc
+ItemDisplay[CLVL>80 (gsv OR gsy OR gsb OR gsg OR gsr OR gsw OR sku)]: {%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
+
+// Hide gold stacks that are less than 500 in hell difficulty
+ItemDisplay[CLVL>80 AND DIFF=2 AND GOLD<500]:
+
+//////////////////////////////////////
 ////     Extra Notifications      ////
 //////////////////////////////////////
 
@@ -225,7 +247,7 @@ ItemDisplay[wss OR lbox OR dcho OR dcso OR dcbl OR dcma]: %NAME%%MAP-A5%{%WHITE%
 ItemDisplay[imma OR imra OR upma OR scou OR rera OR upmp OR scrb]: %NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
 // Notify on Map Drops
-ItemDisplay[!ID (t11 OR t12 OR t13 OR t21 OR t22 OR t23 OR t24 OR t31 OR t32 OR t33 OR t34 OR t35 OR t41)]: %NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[t11 OR t12 OR t13 OR t21 OR t22 OR t23 OR t24 OR t31 OR t32 OR t33 OR t34 OR t35 OR t41]: %NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
 // Leave everything else
 ItemDisplay[]: %NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
