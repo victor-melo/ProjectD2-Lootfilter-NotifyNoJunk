@@ -195,7 +195,7 @@ ItemDisplay[CLVL>50 AND (yps OR wms OR vps)]: {%NAME% %NL% %WHITE%Sell Price: $%
 ItemDisplay[CLVL>80 AND DIFF=2 AND (rvs OR hp1 OR hp2 OR hp3 OR hp4 OR hp5 OR mp1 OR mp2 OR mp3 OR mp4 OR mp5)]: {%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
 
 // Hide all basic white exceptional and normal items, with less than 2 sockets
-ItemDisplay[CLVL>80 AND NMAG (NORM OR EXC) AND SOCK<2 AND !UNI AND !MAG AND !SET AND !RARE AND !CRAFT AND !PRICE=35000]: {%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
+ItemDisplay[CLVL>80 AND NMAG (NORM OR EXC) AND SOCK<2 AND !UNI AND !MAG AND !SET AND !RARE AND !CRAFT AND !PRICE=35000 AND !leg AND !ear AND !std AND !tbk AND !ibk]: {%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
 
 // Hide Elite items with 1 sockets
 ItemDisplay[CLVL>80 AND NMAG AND ELT AND SOCK=1 AND !UNI AND !MAG AND !SET AND !RARE AND !CRAFT AND !PRICE=35000]: {%NAME% %NL% %WHITE%Sell Price: $%PRICE%}

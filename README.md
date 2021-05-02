@@ -29,6 +29,7 @@ This filter has been tested with Season 2, newer seasons may or may not work.
 * Hide Throwing Potions (Fulminating Potion, Exploding Potion, Oil Potion, Strangling Potion, Choking Potion, Rancid Potion).
 * Hide Antidote, Thawing and stamina potion after level 50
 * Hide Most white items (Normal & Exceptional), all potions except Full Rejuvination potions, and 1 socket normal items once you hit level 80
+* Hide gold piles under $500 in Hell difficulty after reaching level 80
 
 ## Notifications and map icon on the following item drops:
 * All Unique
