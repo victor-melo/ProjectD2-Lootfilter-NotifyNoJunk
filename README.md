@@ -41,6 +41,8 @@ This filter has been tested with Season 2, newer seasons may or may not work.
 * Runedrops AMN or higher
 * All PD2 Items (Worldstone Shards, Larzuk's Puzzle Box, etc)
 * Map Drops
+* Body Parts (Diablos Horn, etc)
+* Keys
 
 # How To Install
 1. Copy NotifyNoJunk.filter to your "ProjectD2\filters\local" Path

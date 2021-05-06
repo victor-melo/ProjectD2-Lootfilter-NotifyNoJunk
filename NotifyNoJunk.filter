@@ -249,6 +249,12 @@ ItemDisplay[imma OR imra OR upma OR scou OR rera OR upmp OR scrb]: %NAME%%MAP-A5
 // Notify on Map Drops
 ItemDisplay[t11 OR t12 OR t13 OR t21 OR t22 OR t23 OR t24 OR t31 OR t32 OR t33 OR t34 OR t35 OR t41]: %NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
+// Notify on Key Drops
+ItemDisplay[pk1 OR pk2 OR pk3]: %NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+
+// Notify on body parts
+ItemDisplay[dhn OR bey OR mbr]: %NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+
 // Leave everything else
 ItemDisplay[]: %NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
