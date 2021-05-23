@@ -12,14 +12,27 @@ ItemDisplay[!ID AND (PRICE=35000 AND DIFF=2) OR (PRICE=30000 AND DIFF=1) OR (PRI
 // Show Runewords as normal
 ItemDisplay[RW AND !UNI AND !MAG AND !RARE AND !SET AND !CRAFT]: %GRAY%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
+// If the item is superior, show it!
+//ItemDisplay[SUP AND (ED > 5)]:[%DARK_GREEN%+%ED%] %CONTINUE%
+ItemDisplay[SUP AND ED=9]:%NAME%%DARK_GREEN% +9%%CONTINUE%
+ItemDisplay[SUP AND ED=10]:%NAME%%DARK_GREEN% +10%%CONTINUE%
+ItemDisplay[SUP AND ED=11]:%NAME%%DARK_GREEN% +11%%CONTINUE%
+ItemDisplay[SUP AND ED=12]:%NAME%%DARK_GREEN% +12%%CONTINUE%
+ItemDisplay[SUP AND ED=13]:%NAME%%DARK_GREEN% +13%%CONTINUE%
+ItemDisplay[SUP AND ED=14]:%NAME%%DARK_GREEN% +14%%CONTINUE%
+ItemDisplay[SUP AND ED=15]:%NAME%%DARK_GREEN% +15%%CONTINUE%
+
+ItemDisplay[SUP AND ED=5]:[%DARK_GREEN%+%STAT18%]%CONTINUE%
+ItemDisplay[SUP AND ED=5]:[%DARK_GREEN%+%STAT18%]%CONTINUE%
+
 // Show Sockets
-ItemDisplay[!ETH AND SOCK>0]: %NAME% + %TAN%%SOCKETS%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}%CONTINUE%
+ItemDisplay[!ETH AND SOCK>0]:%NAME% + %TAN%%SOCKETS%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}%CONTINUE%
 
 // Show Ethereal
-ItemDisplay[ETH AND SOCK=0]: %NAME% + %GRAY%Eth{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}%CONTINUE%
+ItemDisplay[ETH AND SOCK=0]:%NAME% + %GRAY%Eth{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}%CONTINUE%
 
 // Show Ethereal with sockets
-ItemDisplay[ETH AND SOCK>0]: %NAME% + %GRAY%Eth:%TAN%%SOCKETS%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}%CONTINUE%
+ItemDisplay[ETH AND SOCK>0]:%NAME% + %GRAY%Eth:%TAN%%SOCKETS%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}%CONTINUE%
 
 //////////////////////////////////////
 ////      Charms/Jewels/Runes     ////
@@ -70,102 +83,129 @@ ItemDisplay[r33 OR r33s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price:
 ////         Elite Items          ////
 //////////////////////////////////////
 
-// Highlight exceptional gear with at least 2 open sockets
-ItemDisplay[ELT AND SOCK>1 AND !RW AND !ETH AND !UNI AND !MAG AND !RARE AND !SET AND !CRAFT]: %RED% + %GRAY%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[ELT AND SOCK>1 AND !RW AND ETH AND !UNI AND !MAG AND !RARE AND !SET AND !CRAFT]: %RED% + %GRAY%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+// Highlight elite gear with at least 2 open sockets
+ItemDisplay[!INF AND ELT AND SOCK>1 AND !RW AND !UNI AND !MAG AND !RARE AND !SET AND !CRAFT]:%RED%+ %GRAY%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+//ItemDisplay[!INF AND ELT AND (SOCK>1 OR SOCK=0) AND !RW AND ETH AND !UNI AND !MAG AND !RARE AND !SET AND !CRAFT]: %RED%+ %GRAY%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
-// Highlight exceptional magic gear for crafting bases, and add crafting recipes in the description of both exceptional & elite magic items
+// Highlight elite weapons with no sockets that could have sockets
+ItemDisplay[(WP1 OR WP2 OR WP3 OR WP4 OR WP7 OR WP8 OR WP9 OR WP10 OR WP11 OR WP12 OR WP13) AND !WP5 AND !INF AND ELT AND SOCK=0 AND !RW AND !ETH AND !UNI AND !MAG AND !RARE AND !SET AND !CRAFT]:%RED%+ %WHITE%%NAME%
+ItemDisplay[!SUP !INF (WP1 OR WP2 OR WP3 OR WP4 OR WP7 OR WP8 OR WP9 OR WP10 OR WP11 OR WP12 OR WP13) AND !WP5 AND !INF AND ELT AND SOCK=0 AND !RW AND !ETH AND !UNI AND !MAG AND !RARE AND !SET AND !CRAFT]:%NAME%{%YELLOW%Add Sockets: Ral & Amn & Perfect Amethyst%NL%%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+
+// Highlight elite weapons with no sockets that could have sockets and is ethereal
+ItemDisplay[(WP1 OR WP2 OR WP3 OR WP4 OR WP7 OR WP8 OR WP9 OR WP10 OR WP11 OR WP12 OR WP13) AND !WP5 AND !INF AND ELT AND SOCK=0 AND !RW AND ETH AND !UNI AND !MAG AND !RARE AND !SET AND !CRAFT]:%RED%+ %GRAY%%NAME%
+ItemDisplay[!SUP !INF (WP1 OR WP2 OR WP3 OR WP4 OR WP7 OR WP8 OR WP9 OR WP10 OR WP11 OR WP12 OR WP13) AND !WP5 AND !INF AND ELT AND SOCK=0 AND !RW AND ETH AND !UNI AND !MAG AND !RARE AND !SET AND !CRAFT]:%NAME%{%YELLOW%Add Sockets: Ral & Amn & Perfect Amethyst%NL%%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+
+// Highlight elite Armor with no sockets that could have sockets
+ItemDisplay[EQ2 AND !INF AND ELT AND SOCK=0 AND !RW AND !ETH AND !UNI AND !MAG AND !RARE AND !SET AND !CRAFT]:%RED%+ %WHITE%%NAME%{%YELLOW%Add Sockets: Tal & Thul & Perfect Topaz%NL%%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+
+// Highlight elite Armor with no sockets that could have sockets and is ethereal
+ItemDisplay[EQ2 AND !INF AND ELT AND SOCK=0 AND !RW AND ETH AND !UNI AND !MAG AND !RARE AND !SET AND !CRAFT]:%RED%+ %GRAY%%NAME%{%YELLOW%Add Sockets: Tal & Thul & Perfect Topaz%NL%%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+
+// Highlight elite Helmet with no sockets that could have sockets
+ItemDisplay[(EQ1 OR EQ7) AND !INF AND ELT AND SOCK=0 AND !RW AND !ETH AND !UNI AND !MAG AND !RARE AND !SET AND !CRAFT]:%RED%+ %WHITE%%NAME%{%YELLOW%Add Sockets: Ral & Thul & Perfect Sapphire%NL%%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+
+// Highlight elite Helmet with no sockets that could have sockets and is ethereal
+ItemDisplay[(EQ1 OR EQ7) AND !INF AND ELT AND SOCK=0 AND !RW AND ETH AND !UNI AND !MAG AND !RARE AND !SET AND !CRAFT]:%RED%+ %GRAY%%NAME%{%YELLOW%Add Sockets: Ral & Thul & Perfect Sapphire%NL%%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+
+// Highlight elite Shield with no sockets that could have sockets
+ItemDisplay[EQ3 AND !INF AND ELT AND SOCK=0 AND !RW AND !ETH AND !UNI AND !MAG AND !RARE AND !SET AND !CRAFT]:%RED%+ %WHITE%%NAME%{%YELLOW%Add Sockets: Tal & Amn & Perfect Ruby%NL%%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+
+// Highlight elite Shield with no sockets that could have sockets and is ethereal
+ItemDisplay[EQ3 AND !INF AND ELT AND SOCK=0 AND !RW AND ETH AND !UNI AND !MAG AND !RARE AND !SET AND !CRAFT]:%RED%+ %GRAY%%NAME%{%YELLOW%Add Sockets: Tal & Amn & Perfect Ruby%NL%%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+
+
+// Highlight elite magic gear for crafting bases, and add crafting recipes in the description of both exceptional & elite magic items
 // Boots
-ItemDisplay[(ELT OR EXC) MAG AND EQ5]: %BLUE%%NAME%{%TAN%Blood: Ruby & eth%NL%Caster: Amethyst & thul%NL%Power: Sapphire & ral%NL%Safety: Emerald & ort%NL%%WHITE%Sell Price: $%PRICE% %NL%Item Level: %ILVL%}%CONTINUE%
-ItemDisplay[ELT MAG AND EQ5]: %ORANGE%+ %NAME%{%NAME%}
-ItemDisplay[EXC MAG AND EQ5]: %NAME%{%NAME%}
+ItemDisplay[(ELT OR EXC) MAG AND EQ5]:%BLUE%%NAME%{%TAN%Blood: Ruby & eth%NL%Caster: Amethyst & thul%NL%Power: Sapphire & ral%NL%Safety: Emerald & ort%NL%%WHITE%Sell Price: $%PRICE% %NL%Item Level: %ILVL%}%CONTINUE%
+ItemDisplay[ELT MAG AND EQ5]:%ORANGE%+ %NAME%{%NAME%}
+ItemDisplay[EXC MAG AND EQ5]:%NAME%{%NAME%}
 
 // Gloves
-ItemDisplay[(ELT OR EXC) MAG AND EQ4]: %BLUE%%NAME%{%TAN%Blood: Ruby & nef%NL%Caster: Amethyst & ort%NL%Power: Sapphire & ort%NL%Safety: Emerald & ral%NL%%WHITE%Sell Price: $%PRICE% %NL%Item Level: %ILVL%}%CONTINUE%
-ItemDisplay[ELT MAG AND EQ4]: %ORANGE%+ %NAME%{%NAME%}
-ItemDisplay[EXC MAG AND EQ4]: %NAME%{%NAME%}
+ItemDisplay[(ELT OR EXC) MAG AND EQ4]:%BLUE%%NAME%{%TAN%Blood: Ruby & nef%NL%Caster: Amethyst & ort%NL%Power: Sapphire & ort%NL%Safety: Emerald & ral%NL%%WHITE%Sell Price: $%PRICE% %NL%Item Level: %ILVL%}%CONTINUE%
+ItemDisplay[ELT MAG AND EQ4]:%ORANGE%+ %NAME%{%NAME%}
+ItemDisplay[EXC MAG AND EQ4]:%NAME%{%NAME%}
 
 // Chest Armor
-ItemDisplay[(ELT OR EXC) MAG AND EQ2]: %BLUE%%NAME%{%TAN%Blood: Ruby & thul%NL%Caster: Amethyst & tal%NL%Power: Sapphire & nef%NL%Safety: Emerald & eth%NL%%WHITE%Sell Price: $%PRICE% %NL%Item Level: %ILVL%}%CONTINUE%
-ItemDisplay[ELT MAG AND EQ2]: %ORANGE%+ %NAME%{%NAME%}
-ItemDisplay[EXC MAG AND EQ2]: %NAME%{%NAME%}
+ItemDisplay[(ELT OR EXC) MAG AND EQ2]:%BLUE%%NAME%{%TAN%Blood: Ruby & thul%NL%Caster: Amethyst & tal%NL%Power: Sapphire & nef%NL%Safety: Emerald & eth%NL%%WHITE%Sell Price: $%PRICE% %NL%Item Level: %ILVL%}%CONTINUE%
+ItemDisplay[ELT MAG AND EQ2]:%ORANGE%+ %NAME%{%NAME%}
+ItemDisplay[EXC MAG AND EQ2]:%NAME%{%NAME%}
 
 // Belts
-ItemDisplay[(ELT OR EXC) MAG AND EQ6]: %BLUE%%NAME%{%TAN%Blood: Ruby & tal%NL%Caster: Amethyst & ith%NL%Power: Sapphire & tal%NL%Safety: Emerald & tal%NL%%WHITE%Sell Price: $%PRICE% %NL%Item Level: %ILVL%}%CONTINUE%
-ItemDisplay[ELT MAG AND EQ6]: %ORANGE%+ %NAME%{%NAME%}
-ItemDisplay[EXC MAG AND EQ6]: %NAME%{%NAME%}
+ItemDisplay[(ELT OR EXC) MAG AND EQ6]:%BLUE%%NAME%{%TAN%Blood: Ruby & tal%NL%Caster: Amethyst & ith%NL%Power: Sapphire & tal%NL%Safety: Emerald & tal%NL%%WHITE%Sell Price: $%PRICE% %NL%Item Level: %ILVL%}%CONTINUE%
+ItemDisplay[ELT MAG AND EQ6]:%ORANGE%+ %NAME%{%NAME%}
+ItemDisplay[EXC MAG AND EQ6]:%NAME%{%NAME%}
 
 // Helmet
-ItemDisplay[(ELT OR EXC) MAG AND EQ1]: %BLUE%%NAME%{%TAN%Blood: Ruby & ral%NL%Caster: Amethyst & nef%NL%Power: Sapphire & ith%NL%Safety: Emerald & ith%NL%%WHITE%Sell Price: $%PRICE% %NL%Item Level: %ILVL%}%CONTINUE%
-ItemDisplay[ELT MAG AND EQ1]: %ORANGE%+ %NAME%{%NAME%}
-ItemDisplay[EXC MAG AND EQ1]: %NAME%{%NAME%}
+ItemDisplay[(ELT OR EXC) MAG AND EQ1]:%BLUE%%NAME%{%TAN%Blood: Ruby & ral%NL%Caster: Amethyst & nef%NL%Power: Sapphire & ith%NL%Safety: Emerald & ith%NL%%WHITE%Sell Price: $%PRICE% %NL%Item Level: %ILVL%}%CONTINUE%
+ItemDisplay[ELT MAG AND EQ1]:%ORANGE%+ %NAME%{%NAME%}
+ItemDisplay[EXC MAG AND EQ1]:%NAME%{%NAME%}
 
 // Weapons (Not Bows)
-ItemDisplay[(ELT OR EXC) MAG AND WEAPON !WP9 !WP10]: %BLUE%%NAME%{%TAN%Blood: Ruby & ort%NL%Caster: Amethyst & tir%NL%Power: Sapphire & tir%NL%%WHITE%Sell Price: $%PRICE% %NL%Item Level: %ILVL%}%CONTINUE%
-ItemDisplay[ELT MAG AND WEAPON !WP9 !WP10]: %ORANGE%+ %NAME%{%NAME%}
-ItemDisplay[EXC MAG AND WEAPON !WP9 !WP10]: %NAME%{%NAME%}
+ItemDisplay[(ELT OR EXC) MAG AND WEAPON !WP9 !WP10]:%BLUE%%NAME%{%TAN%Blood: Ruby & ort%NL%Caster: Amethyst & tir%NL%Power: Sapphire & tir%NL%%WHITE%Sell Price: $%PRICE% %NL%Item Level: %ILVL%}%CONTINUE%
+ItemDisplay[ELT MAG AND WEAPON !WP9 !WP10]:%ORANGE%+ %NAME%{%NAME%}
+ItemDisplay[EXC MAG AND WEAPON !WP9 !WP10]:%NAME%{%NAME%}
 
 // Bows
-ItemDisplay[(ELT OR EXC) MAG AND (WP9 OR WP10)]: %BLUE%%NAME%{%TAN%Blood: Ruby & ort%NL%Caster: Amethyst & tir%NL%Power: Sapphire & tir%NL%Safety: Emerald & sol%NL%%WHITE%Sell Price: $%PRICE% %NL%Item Level: %ILVL%}%CONTINUE%
-ItemDisplay[ELT MAG AND (WP9 OR WP10)]: %ORANGE%+ %NAME%{%NAME%}
-ItemDisplay[EXC MAG AND (WP9 OR WP10)]: %NAME%{%NAME%}
+ItemDisplay[(ELT OR EXC) MAG AND (WP9 OR WP10)]:%BLUE%%NAME%{%TAN%Blood: Ruby & ort%NL%Caster: Amethyst & tir%NL%Power: Sapphire & tir%NL%Safety: Emerald & sol%NL%%WHITE%Sell Price: $%PRICE% %NL%Item Level: %ILVL%}%CONTINUE%
+ItemDisplay[ELT MAG AND (WP9 OR WP10)]:%ORANGE%+ %NAME%{%NAME%}
+ItemDisplay[EXC MAG AND (WP9 OR WP10)]:%NAME%{%NAME%}
 
 // Shield
-ItemDisplay[(ELT OR EXC) MAG AND EQ3]: %BLUE%%NAME%{%TAN%Blood: Ruby & ith%NL%Caster: Amethyst & eth%NL%Power: Sapphire & eth%NL%Safety: Emerald & nef%NL%%WHITE%Sell Price: $%PRICE% %NL%Item Level: %ILVL%}%CONTINUE%
-ItemDisplay[ELT MAG AND EQ3]: %ORANGE%+ %NAME%{%NAME%}
-ItemDisplay[EXC MAG AND EQ3]: %NAME%{%NAME%}
+ItemDisplay[(ELT OR EXC) MAG AND EQ3]:%BLUE%%NAME%{%TAN%Blood: Ruby & ith%NL%Caster: Amethyst & eth%NL%Power: Sapphire & eth%NL%Safety: Emerald & nef%NL%%WHITE%Sell Price: $%PRICE% %NL%Item Level: %ILVL%}%CONTINUE%
+ItemDisplay[ELT MAG AND EQ3]:%ORANGE%+ %NAME%{%NAME%}
+ItemDisplay[EXC MAG AND EQ3]:%NAME%{%NAME%}
 
 // Amulet
-ItemDisplay[MAG AND amu]: %ORANGE%+ %BLUE%%NAME%{%TAN%Blood: Ruby & amn%NL%Caster: Amethyst & ral%NL%Power: Sapphire & thul%NL%Safety: Emerald & sol%NL%%WHITE%Sell Price: $%PRICE% %NL%Item Level: %ILVL%}
+ItemDisplay[MAG AND amu]:%ORANGE%+ %BLUE%%NAME%{%TAN%Blood: Ruby & amn%NL%Caster: Amethyst & ral%NL%Power: Sapphire & thul%NL%Safety: Emerald & sol%NL%%WHITE%Sell Price: $%PRICE% %NL%Item Level: %ILVL%}
 
 // Ring
-ItemDisplay[MAG AND rin]: %ORANGE%+ %BLUE%%NAME%{%TAN%Blood: Ruby & sol%NL%Caster: Amethyst & amn%NL%Power: Sapphire & amn%NL%Safety: Emerald & amn%NL%%WHITE%Sell Price: $%PRICE% %NL%Item Level: %ILVL%}
+ItemDisplay[MAG AND rin]:%ORANGE%+ %BLUE%%NAME%{%TAN%Blood: Ruby & sol%NL%Caster: Amethyst & amn%NL%Power: Sapphire & amn%NL%Safety: Emerald & amn%NL%%WHITE%Sell Price: $%PRICE% %NL%Item Level: %ILVL%}
 
 //////////////////////////////////////
 ////             Gems             ////
 //////////////////////////////////////
 
 // Amethyst
-ItemDisplay[gzv OR gzvs]: %RED%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[gpv OR gpvs]: %RED%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[gzv OR gzvs]:%RED%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[gpv OR gpvs]:%RED%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
 // Diamond
-ItemDisplay[glw OR glws]: %RED%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[gpw OR gpws]: %RED%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[glw OR glws]:%RED%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[gpw OR gpws]:%RED%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
 // Emerald
-ItemDisplay[glg OR glgs]: %RED%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[gpg OR gpgs]: %RED%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[glg OR glgs]:%RED%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[gpg OR gpgs]:%RED%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
 // Ruby
-ItemDisplay[glr OR glrs]: %RED%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[gpr OR gprs]: %RED%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[glr OR glrs]:%RED%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[gpr OR gprs]:%RED%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
 // Sapphire
-ItemDisplay[glb OR glbs]: %RED%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[gpb OR gpbs]: %RED%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[glb OR glbs]:%RED%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[gpb OR gpbs]:%RED%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
 // Skull
-ItemDisplay[skl OR skls]: %RED%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[skz OR skzs]: %RED%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[skl OR skls]:%RED%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[skz OR skzs]:%RED%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
 // Topaz
-ItemDisplay[gly OR glys]: %RED%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[gpy OR gpys]: %RED%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[gly OR glys]:%RED%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[gpy OR gpys]:%RED%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
 //////////////////////////////////////
 ////            Potions           ////
 //////////////////////////////////////
 
 // Highlight Full Rejuvenation Potion 
-ItemDisplay[rvl]: %PURPLE%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[rvl]:%PURPLE%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
 //////////////////////////////////////
 ////           Hide Junk          ////
 //////////////////////////////////////
 
 // Hide Arrows & Bolts past normal difficulty
-ItemDisplay[(aqv CLVL>15) OR (cqv CLVL>15)]: {%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
+ItemDisplay[(aqv CLVL>15) OR (cqv CLVL>15)]:{%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
 
 //// Hide Lower Quality Gems
 
@@ -173,16 +213,16 @@ ItemDisplay[(aqv CLVL>15) OR (cqv CLVL>15)]: {%NAME% %NL% %WHITE%Sell Price: $%P
 ItemDisplay[GEM=1 CLVL>50]:{%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
 
 // Hide all Flawed gems past level 50
-ItemDisplay[GEM=2 CLVL>50]: {%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
+ItemDisplay[GEM=2 CLVL>50]:{%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
 
 // Hide Inferior Items, except class specific ones
-ItemDisplay[INF !(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON)]: {%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
+ItemDisplay[INF !(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON)]:{%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
 
 // Hide Throwing Potions (Fulminating Potion, Exploding Potion, Oil Potion, Strangling Potion, Choking Potion, Rancid Potion)
-ItemDisplay[opl OR opm OR ops OR gpl OR gpm OR gps]: {%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
+ItemDisplay[opl OR opm OR ops OR gpl OR gpm OR gps]:{%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
 
 // Hide Antidote, Thawing and stamina potion after level 50
-ItemDisplay[CLVL>50 AND (yps OR wms OR vps)]: {%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
+ItemDisplay[CLVL>50 AND (yps OR wms OR vps)]:{%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
 
 //////////////////////////////////////
 ////  Hide Junk (After level 80)  ////
@@ -192,65 +232,90 @@ ItemDisplay[CLVL>50 AND (yps OR wms OR vps)]: {%NAME% %NL% %WHITE%Sell Price: $%
 // The intention here is to hide most of the junk to make it easier to actually pick up the stuff you want.
 
 // Hide all healing/mana potions (Except Full Rejuvenation Potions)
-ItemDisplay[CLVL>80 AND DIFF=2 AND (rvs OR hp1 OR hp2 OR hp3 OR hp4 OR hp5 OR mp1 OR mp2 OR mp3 OR mp4 OR mp5)]: {%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
+ItemDisplay[CLVL>80 AND DIFF=2 AND (rvs OR hp1 OR hp2 OR hp3 OR hp4 OR hp5 OR mp1 OR mp2 OR mp3 OR mp4 OR mp5)]:{%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
 
 // Hide all basic white exceptional and normal items, with less than 2 sockets
-ItemDisplay[CLVL>80 AND NMAG (NORM OR EXC) AND SOCK<2 AND !UNI AND !MAG AND !SET AND !RARE AND !CRAFT AND !PRICE=35000 AND !leg AND !ear AND !std AND !tbk AND !ibk]: {%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
+ItemDisplay[CLVL>80 AND NMAG (NORM OR EXC) AND SOCK<2 AND !UNI AND !MAG AND !SET AND !RARE AND !CRAFT AND !PRICE=35000 AND !leg AND !ear AND !std AND !tbk AND !ibk]:{%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
 
 // Hide Elite items with 1 sockets
-ItemDisplay[CLVL>80 AND NMAG AND ELT AND SOCK=1 AND !UNI AND !MAG AND !SET AND !RARE AND !CRAFT AND !PRICE=35000]: {%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
+ItemDisplay[CLVL>80 AND NMAG AND ELT AND SOCK=1 AND !UNI AND !MAG AND !SET AND !RARE AND !CRAFT AND !PRICE=35000]:{%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
 
 // Hide Mid tier gems eg: Ruby, Sapphire, etc
-ItemDisplay[CLVL>80 (gsv OR gsy OR gsb OR gsg OR gsr OR gsw OR sku)]: {%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
+ItemDisplay[CLVL>80 (gsv OR gsy OR gsb OR gsg OR gsr OR gsw OR sku)]:{%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
 
 // Hide gold stacks that are less than 500 in hell difficulty
 ItemDisplay[CLVL>80 AND DIFF=2 AND GOLD<500]:
+
+// Hide all normal ethereal belts, boots and Gloves
+ItemDisplay[ETH AND NMAG AND (BELT OR BOOTS OR GLOVES)]:
+
+//////////////////////////////////////
+////  Hide Junk (After level 90)  ////
+//////////////////////////////////////
+//
+// The assumption here is once you hit level 90, you will want even more stuff filtered, like gold piles under 1000 gold
+
+// Hide gold stacks that are less than 1000 in hell difficulty
+ItemDisplay[CLVL>90 AND DIFF=2 AND GOLD<1000]:
 
 //////////////////////////////////////
 ////     Extra Notifications      ////
 //////////////////////////////////////
 
-ItemDisplay[UNI !ID]: %NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[SET !ID]: %NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[UNI !ID]:%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[SET !ID]:%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
 // Notify on Charm Drops
-ItemDisplay[MAG cm1 !ID]: %NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[MAG cm2 !ID]: %NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[MAG cm3 !ID]: %NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[MAG cm1 !ID]:%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[MAG cm2 !ID]:%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[MAG cm3 !ID]:%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
 // Notify on Jewels Drops
-ItemDisplay[jew !ID]: %NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[jew !ID]:%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
 //// Notify on Various Rare Drops
 // Rare Class Specific Items
-ItemDisplay[RARE !ID (CL1 OR CL2 OR CL3 OR CL4 OR CL5 OR CL6 OR CL7)]: %NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[RARE !ID (CL1 OR CL2 OR CL3 OR CL4 OR CL5 OR CL6 OR CL7)]:%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
 // Rare Jewelry
-ItemDisplay[RARE !ID (rin OR amu OR jew)]: %NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[RARE !ID (rin OR amu OR jew)]:%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
 // Rare Boots
-ItemDisplay[RARE !ID EQ5]: %NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[RARE !ID EQ5]:%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
 // Rare Gloves
-ItemDisplay[RARE !ID EQ4]: %NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[RARE !ID EQ4]:%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
 // Rare Belts
-ItemDisplay[RARE !ID EQ6]: %NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[RARE !ID EQ6]:%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
 // Rare Circlets
-ItemDisplay[RARE !ID EQ7]: %NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[RARE !ID EQ7]:%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
 // Notify on Project Diablo specific items (Not Maps)
-ItemDisplay[wss OR lbox OR dcho OR dcso OR dcbl OR dcma]: %NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[wss OR lbox OR dcho OR dcso OR dcbl OR dcma]:%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
 // Notify on Orb Drops
-ItemDisplay[imma OR imra OR upma OR scou OR rera OR upmp OR scrb]: %NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[imma OR imra OR upma OR scou OR rera OR upmp OR scrb]:%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
 // Notify on Map Drops
-ItemDisplay[t11 OR t12 OR t13 OR t21 OR t22 OR t23 OR t24 OR t31 OR t32 OR t33 OR t34 OR t35 OR t41]: %NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+// Tier 1
+ItemDisplay[NMAG AND (t11 OR t12 OR t13)]:%RED%*T1 %WHITE%%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[MAG AND (t11 OR t12 OR t13)]:%RED%*T1 %BLUE%%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[RARE AND (t11 OR t12 OR t13)]:%RED%*T1 %YELLOW%%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+
+// Tier 2
+ItemDisplay[NMAG AND (t21 OR t22 OR t23 OR t24)]:%RED%*T2 %WHITE%%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[MAG AND (t21 OR t22 OR t23 OR t24)]:%RED%*T2 %BLUE%%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[RARE AND (t21 OR t22 OR t23 OR t24)]:%RED%*T2 %YELLOW%%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+
+// Tier 3
+ItemDisplay[NMAG AND (t31 OR t32 OR t33 OR t34 OR t35 OR t41)]:%RED%*T3 %WHITE%%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[MAG AND (t31 OR t32 OR t33 OR t34 OR t35 OR t41)]:%RED%*T3 %BLUE%%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[RARE AND (t31 OR t32 OR t33 OR t34 OR t35 OR t41)]:%RED%*T3 %YELLOW%%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
 // Notify on Key Drops
-ItemDisplay[pk1 OR pk2 OR pk3]: %NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[pk1 OR pk2 OR pk3]: %ORANGE%%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
 // Notify on body parts
 ItemDisplay[dhn OR bey OR mbr]: %NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}

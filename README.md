@@ -10,6 +10,8 @@ This filter has been tested with Season 2, newer seasons may or may not work.
 * Show a little red plus sign on all elite items with more than 2 sockets
 * Dollar sign icon added to most items that have a sell price of $35000
 * Elite craftable bases will have an orange plus sign
+* Show a little red plus sign and tier number for maps
+* Show Enhanced damage/defense for superior items in green if they are +9% or higher
 
 ## New Highlights
 * Flawless & Perfect Gems on ground (Red).
@@ -21,6 +23,7 @@ This filter has been tested with Season 2, newer seasons may or may not work.
 * Added Item Level to all items
 * Added sell price to most items
 * Added crafting recipes to craftable elite/exceptional magic items
+* Added socket recipes to elite white items
 
 ## Hide Junk
 * Hide Arrows & Bolts after reaching Level 15.
@@ -30,6 +33,7 @@ This filter has been tested with Season 2, newer seasons may or may not work.
 * Hide Antidote, Thawing and stamina potion after level 50
 * Hide Most white items (Normal & Exceptional), all potions except Full Rejuvination potions, and 1 socket normal items once you hit level 80
 * Hide gold piles under $500 in Hell difficulty after reaching level 80
+* Hide gold piles under $1000 in Hell difficulty after reaching level 90
 
 ## Notifications and map icon on the following item drops:
 * All Unique
