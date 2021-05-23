@@ -22,9 +22,6 @@ ItemDisplay[SUP AND ED=13]:%NAME%%DARK_GREEN% +13%%CONTINUE%
 ItemDisplay[SUP AND ED=14]:%NAME%%DARK_GREEN% +14%%CONTINUE%
 ItemDisplay[SUP AND ED=15]:%NAME%%DARK_GREEN% +15%%CONTINUE%
 
-ItemDisplay[SUP AND ED=5]:[%DARK_GREEN%+%STAT18%]%CONTINUE%
-ItemDisplay[SUP AND ED=5]:[%DARK_GREEN%+%STAT18%]%CONTINUE%
-
 // Show Sockets
 ItemDisplay[!ETH AND SOCK>0]:%NAME% + %TAN%%SOCKETS%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}%CONTINUE%
 
@@ -204,7 +201,7 @@ ItemDisplay[rvl]:%PURPLE%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %IL
 ////           Hide Junk          ////
 //////////////////////////////////////
 
-// Hide Arrows & Bolts past normal difficulty
+// Hide Arrows & Bolts past level 15
 ItemDisplay[(aqv CLVL>15) OR (cqv CLVL>15)]:{%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
 
 //// Hide Lower Quality Gems
