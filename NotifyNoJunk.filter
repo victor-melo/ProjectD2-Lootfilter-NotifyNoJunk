@@ -98,10 +98,10 @@ ItemDisplay[EQ2 AND !INF AND ELT AND SOCK=0 AND !RW AND !ETH AND !UNI AND !MAG A
 ItemDisplay[EQ2 AND !INF AND ELT AND SOCK=0 AND !RW AND ETH AND !UNI AND !MAG AND !RARE AND !SET AND !CRAFT]:%RED%+ %GRAY%%NAME%{%YELLOW%Add Sockets: Tal & Thul & Perfect Topaz%NL%%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
 // Highlight elite Helmet with no sockets that could have sockets
-ItemDisplay[(EQ1 OR EQ7) AND !INF AND ELT AND SOCK=0 AND !RW AND !ETH AND !UNI AND !MAG AND !RARE AND !SET AND !CRAFT]:%RED%+ %WHITE%%NAME%{%YELLOW%Add Sockets: Ral & Thul & Perfect Sapphire%NL%%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[(EQ1 OR EQ7) AND !INF AND ELT AND SOCK=0 AND !RW AND !ETH AND !UNI AND !MAG AND !RARE AND !SET AND !CRAFT AND !DRU]:%RED%+ %WHITE%%NAME%{%YELLOW%Add Sockets: Ral & Thul & Perfect Sapphire%NL%%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
 // Highlight elite Helmet with no sockets that could have sockets and is ethereal
-ItemDisplay[(EQ1 OR EQ7) AND !INF AND ELT AND SOCK=0 AND !RW AND ETH AND !UNI AND !MAG AND !RARE AND !SET AND !CRAFT]:%RED%+ %GRAY%%NAME%{%YELLOW%Add Sockets: Ral & Thul & Perfect Sapphire%NL%%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[(EQ1 OR EQ7) AND !INF AND ELT AND SOCK=0 AND !RW AND ETH AND !UNI AND !MAG AND !RARE AND !SET AND !CRAFT AND !DRU]:%RED%+ %GRAY%%NAME%{%YELLOW%Add Sockets: Ral & Thul & Perfect Sapphire%NL%%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
 // Highlight elite Shield with no sockets that could have sockets
 ItemDisplay[EQ3 AND !INF AND ELT AND SOCK=0 AND !RW AND !ETH AND !UNI AND !MAG AND !RARE AND !SET AND !CRAFT]:%RED%+ %WHITE%%NAME%{%YELLOW%Add Sockets: Tal & Amn & Perfect Ruby%NL%%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
@@ -231,7 +231,7 @@ ItemDisplay[CLVL>50 AND (yps OR wms OR vps)]:{%NAME% %NL% %WHITE%Sell Price: $%P
 ItemDisplay[CLVL>80 AND DIFF=2 AND (rvs OR hp1 OR hp2 OR hp3 OR hp4 OR hp5 OR mp1 OR mp2 OR mp3 OR mp4 OR mp5)]:{%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
 
 // Hide all basic white exceptional and normal items, with less than 2 sockets
-ItemDisplay[CLVL>80 AND NMAG (NORM OR EXC) AND SOCK<2 AND !UNI AND !MAG AND !SET AND !RARE AND !CRAFT AND !PRICE=35000 AND !leg AND !ear AND !std AND !tbk AND !ibk]:{%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
+ItemDisplay[CLVL>80 AND NMAG (NORM OR EXC) AND SOCK<2 AND !UNI AND !MAG AND !SET AND !RARE AND !CRAFT AND !PRICE=35000 AND !leg AND !ear AND !std AND !tbk AND !ibk AND !CL1 AND !CL2 AND !CL5]:{%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
 
 // Hide Elite items with 1 sockets
 ItemDisplay[CLVL>80 AND NMAG AND ELT AND SOCK=1 AND !UNI AND !MAG AND !SET AND !RARE AND !CRAFT AND !PRICE=35000]:{%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
@@ -323,6 +323,11 @@ ItemDisplay[dhn OR bey OR mbr]: %NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% 
 
 // Notify on essence drops
 ItemDisplay[tes OR ceh OR bet OR fed]: %NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+
+// Notify on base items with good skills
+// Druid Pelt with +3 twister
+ItemDisplay[CL1 AND SOCK=0 AND SK240=3]: %RED%+ %WHITE%%NAME%%RED% +TWISTER%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[CL1 AND (SOCK>1 OR ETH) AND SK240=3]: %GRAY%+ %WHITE%%NAME%%RED% +TWISTER%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
 // Leave everything else
 ItemDisplay[]: %NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
