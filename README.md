@@ -12,6 +12,7 @@ This filter has been tested with Season 2, newer seasons may or may not work.
 * Elite craftable bases will have an orange plus sign
 * Show a little red plus sign and tier number for maps
 * Show Enhanced damage/defense for superior items in green if they are +9% or higher
+* Show good item bases for runewords
 
 ## New Highlights
 * Flawless & Perfect Gems on ground (Red).
@@ -47,6 +48,7 @@ This filter has been tested with Season 2, newer seasons may or may not work.
 * Map Drops
 * Body Parts (Diablos Horn, etc)
 * Keys
+* Good item bases for runewords
 
 # How To Install
 1. Copy NotifyNoJunk.filter to your "ProjectD2\filters\local" Path
