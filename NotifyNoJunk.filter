@@ -271,7 +271,7 @@ ItemDisplay[MAG cm3 !ID]:%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Le
 ItemDisplay[jew !ID]:%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
 //// Notify on all Rare Drops
-ItemDisplay[RARE !ID (rin OR amu OR jew OR ARMOR OR WEAPON OR CL1 OR CL2 OR CL3 OR CL4 OR CL5 OR CL6 OR CL7)]:%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[RARE !ID (aqv OR cqv OR rin OR amu OR jew OR ARMOR OR WEAPON OR CL1 OR CL2 OR CL3 OR CL4 OR CL5 OR CL6 OR CL7)]:%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
 // Notify on general purpose Project Diablo specific stuff
 ItemDisplay[wss OR lbox OR lpp OR jewf OR lsvl OR llmr OR rkey OR rtp OR rid OR cwss]:%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
