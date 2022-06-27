@@ -42,40 +42,73 @@ ItemDisplay[(MAG cm1) OR (MAG cm2) OR (MAG cm3) OR (MAG jew)]:%DARK_GREEN%%NAME%
 // ItemDisplay[MAG jew]:%DARK_GREEN%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
 // Runes
-ItemDisplay[r01 OR r01s]:%ORANGE%%NAME% (%RUNENUM%) {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[r02 OR r02s]:%ORANGE%%NAME% (%RUNENUM%) {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[r03 OR r03s]:%ORANGE%%NAME% (%RUNENUM%) {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[r04 OR r04s]:%ORANGE%%NAME% (%RUNENUM%) {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[r05 OR r05s]:%ORANGE%%NAME% (%RUNENUM%) {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[r06 OR r06s]:%ORANGE%%NAME% (%RUNENUM%) {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[r07 OR r07s]:%ORANGE%%NAME% (%RUNENUM%) {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[r08 OR r08s]:%ORANGE%%NAME% (%RUNENUM%) {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[r09 OR r09s]:%ORANGE%%NAME% (%RUNENUM%) {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%} 
-ItemDisplay[r10 OR r10s]:%ORANGE%%NAME% (%RUNENUM%) {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%} 
-ItemDisplay[r11 OR r11s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[r12 OR r12s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[r13 OR r13s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[r14 OR r14s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[r15 OR r15s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[r16 OR r16s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[r17 OR r17s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[r18 OR r18s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[r19 OR r19s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[r20 OR r20s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[r21 OR r21s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[r22 OR r22s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[r23 OR r23s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[r24 OR r24s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[r25 OR r25s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[r26 OR r26s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[r27 OR r27s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[r28 OR r28s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[r29 OR r29s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[r30 OR r30s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[r31 OR r31s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[r32 OR r32s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[r33 OR r33s]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[r01]:%ORANGE%%NAME% (%RUNENUM%) {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[r02]:%ORANGE%%NAME% (%RUNENUM%) {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[r03]:%ORANGE%%NAME% (%RUNENUM%) {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[r04]:%ORANGE%%NAME% (%RUNENUM%) {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[r05]:%ORANGE%%NAME% (%RUNENUM%) {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[r06]:%ORANGE%%NAME% (%RUNENUM%) {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[r07]:%ORANGE%%NAME% (%RUNENUM%) {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[r08]:%ORANGE%%NAME% (%RUNENUM%) {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[r09]:%ORANGE%%NAME% (%RUNENUM%) {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%} 
+ItemDisplay[r10]:%ORANGE%%NAME% (%RUNENUM%) {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%} 
+ItemDisplay[r11]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[r12]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[r13]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[r14]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[r15]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[r16]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[r17]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[r18]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[r19]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[r20]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[r21]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[r22]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[r23]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[r24]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[r25]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[r26]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[r27]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[r28]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[r29]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[r30]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[r31]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[r32]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[r33]:%ORANGE%%NAME% (%RUNENUM%) %MAP-A5% {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
+ItemDisplay[r01s]:%ORANGE%%NAME% (%RUNENUM%)  {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL% %NL%%NL%Weapons: +50 to attack rating, +1 to light radius%NL%Armor: +15 Defense, +1 to light radius%NL%Shield: +15 Defense, +1 to light radius}
+ItemDisplay[r02s]:%ORANGE%%NAME% (%RUNENUM%)  {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL% %NL%%NL%Weapons: +75% Damage to Undead, +50 to Attack Rating against Undead%NL%Armor: 15% Slower Stamina Drain%NL%Shield: 7% Increased Chance of Blocking}
+ItemDisplay[r03s]:%ORANGE%%NAME% (%RUNENUM%)  {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL% %NL%%NL%Weapons: +2 to Mana after each Kill%NL%Armor: +2 to Mana after each Kill%NL%Shield: +2 to Mana after each Kill}
+ItemDisplay[r04s]:%ORANGE%%NAME% (%RUNENUM%)  {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL% %NL%%NL%Weapons: Knockback%NL%Armor: +30 Defense vs. Missile%NL%Shield: +30 Defense vs. Missile}
+ItemDisplay[r05s]:%ORANGE%%NAME% (%RUNENUM%)  {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL% %NL%%NL%Weapons: -25% Target Defense%NL%Armor: Regenerate Mana 15%%NL%Shield: Regenerate Mana 15%}
+ItemDisplay[r06s]:%ORANGE%%NAME% (%RUNENUM%)  {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL% %NL%%NL%Weapons: +9 to Maximum Damage%NL%Armor: 15% Damage Taken Gained as Mana when Hit%NL%Shield: 15% Damage Taken Gained as Mana when Hit}
+ItemDisplay[r07s]:%ORANGE%%NAME% (%RUNENUM%)  {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL% %NL%%NL%Weapons: +75 Poison Damage over 5 Seconds%NL%Armor: Poison Resist +30%%NL%Shield: Poison Resist +35%}
+ItemDisplay[r08s]:%ORANGE%%NAME% (%RUNENUM%)  {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL% %NL%%NL%Weapons: Adds 5-30 Fire Damage%NL%Armor: Fire Resist +30%%NL%Shield: Fire Resist +35%}
+ItemDisplay[r09s]:%ORANGE%%NAME% (%RUNENUM%)  {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL% %NL%%NL%Weapons: Adds 1-50 Lightning Damage%NL%Armor: Lightning Resist +30%%NL%Shield: Lightning Resist +35%}
+ItemDisplay[r10s]:%ORANGE%%NAME% (%RUNENUM%)  {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL% %NL%%NL%Weapons: Adds 3-14 Cold Damage%NL%Armor: Cold Resist +30%%NL%Shield: Cold Resist +35%}
+ItemDisplay[r11s]:%ORANGE%%NAME% (%RUNENUM%)  {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL% %NL%%NL%Weapons: 7% Life Stolen per Hit%NL%Armor: Attacker Takes Damage of 14%NL%Shield: Attacker Takes Damage of 14}
+ItemDisplay[r12s]:%ORANGE%%NAME% (%RUNENUM%)  {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL% %NL%%NL%Weapons: +9 to Minimum Damage%NL%Armor: Physical Damage Taken Reduced by 7%NL%Shield: Physical Damage Taken Reduced by 7}
+ItemDisplay[r13s]:%ORANGE%%NAME% (%RUNENUM%)  {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL% %NL%%NL%Weapons: +20% Increased Attack Speed%NL%Armor: +20% Faster Hit Recovery%NL%Shield: +20% Faster Block Rate}
+ItemDisplay[r14s]:%ORANGE%%NAME% (%RUNENUM%)  {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL% %NL%%NL%Weapons: 25% Enhanced Damage%NL%Armor: Replenish Life +10%NL%Shield: Replenish Life +10}
+ItemDisplay[r15s]:%ORANGE%%NAME% (%RUNENUM%)  {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL% %NL%%NL%Weapons: Requirements -20%%NL%Armor: Requirements -15%%NL%Shield: Requirements -15%}
+ItemDisplay[r16s]:%ORANGE%%NAME% (%RUNENUM%)  {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL% %NL%%NL%Weapons: +10 to Vitality%NL%Armor: +10 to Vitality%NL%Shield: +10 to Vitality}
+ItemDisplay[r17s]:%ORANGE%%NAME% (%RUNENUM%)  {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL% %NL%%NL%Weapons: +10 to Energy%NL%Armor: +10 to Energy%NL%Shield: +10 to Energy}
+ItemDisplay[r18s]:%ORANGE%%NAME% (%RUNENUM%)  {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL% %NL%%NL%Weapons: +10 to Dexterity%NL%Armor: +10 to Dexterity%NL%Shield: +10 to Dexterity}
+ItemDisplay[r19s]:%ORANGE%%NAME% (%RUNENUM%)  {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL% %NL%%NL%Weapons: +10 to Strength%NL%Armor: +10 to Strength%NL%Shield: +10 to Strength}
+ItemDisplay[r20s]:%ORANGE%%NAME% (%RUNENUM%)  {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL% %NL%%NL%Weapons: 75% Extra Gold From Monsters%NL%Armor: 50% Extra Gold From Monsters%NL%Shield: 50% Extra Gold From Monsters}
+ItemDisplay[r21s]:%ORANGE%%NAME% (%RUNENUM%)  {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL% %NL%%NL%Weapons: +75% Damage to Demons, +100 to Attack Rating against Demons%NL%Armor: +30% Enhanced Defense%NL%Shield: +30% Enhanced Defense}
+ItemDisplay[r22s]:%ORANGE%%NAME% (%RUNENUM%)  {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL% %NL%%NL%Weapons: 25% Chance of Open Wounds%NL%Armor: All Resistances +15%NL%Shield: All Resistances +22}
+ItemDisplay[r23s]:%ORANGE%%NAME% (%RUNENUM%)  {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL% %NL%%NL%Weapons: Prevent Monster Heal%NL%Armor: Magic Damage Taken Reduced by 7%NL%Shield: Magic Damage Taken Reduced by 7}
+ItemDisplay[r24s]:%ORANGE%%NAME% (%RUNENUM%)  {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL% %NL%%NL%Weapons: 30% Better Chance of Getting Magic Items%NL%Armor: 25% Better Chance of Getting Magic Items%NL%Shield: 25% Better Chance of Getting Magic Itemst}
+ItemDisplay[r25s]:%ORANGE%%NAME% (%RUNENUM%)  {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL% %NL%%NL%Weapons: 20% Bonus to Attack Rating%NL%Armor: +4% to Maximum Poison Resist%NL%Shield: +4% to Maximum Poison Resist}
+ItemDisplay[r26s]:%ORANGE%%NAME% (%RUNENUM%)  {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL% %NL%%NL%Weapons: 7% Mana Stolen per Hit%NL%Armor: +4% to Maximum Fire Resist%NL%Shield: +4% to Maximum Fire Resist}
+ItemDisplay[r27s]:%ORANGE%%NAME% (%RUNENUM%)  {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL% %NL%%NL%Weapons: +50% Enhanced Damage%NL%Armor: +4% to Maximum Cold Resist%NL%Shield: +4% to Maximum Cold Resist}
+ItemDisplay[r28s]:%ORANGE%%NAME% (%RUNENUM%)  {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL% %NL%%NL%Weapons: 20% Deadly Strike%NL%Armor: +4% to Maximum Lightning Resist%NL%Shield: +4% to Maximum Lightning Resist}
+ItemDisplay[r29s]:%ORANGE%%NAME% (%RUNENUM%)  {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL% %NL%%NL%Weapons: +4 Life after each Kill%NL%Armor: Increase Maximum Mana 5%%NL%Shield: +50 to Mana}
+ItemDisplay[r30s]:%ORANGE%%NAME% (%RUNENUM%)  {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL% %NL%%NL%Weapons: 20% Chance of Crushing Blow%NL%Armor: Physical Damage Taken Reduced by 4%%NL%Shield: Physical Damage Taken Reduced by 4%}
+ItemDisplay[r31s]:%ORANGE%%NAME% (%RUNENUM%)  {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL% %NL%%NL%Weapons: Ignore Target's Defense%NL%Armor: Increase Maximum Life 5%%NL%Shield: +50 to Life}
+ItemDisplay[r32s]:%ORANGE%%NAME% (%RUNENUM%)  {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL% %NL%%NL%Weapons: Freezes Target +3%NL%Armor: Cannot Be Frozen%NL%Shield: Cannot Be Frozen}
+ItemDisplay[r33s]:%ORANGE%%NAME% (%RUNENUM%)  {%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL% %NL%%NL%Weapons: Indestructible%NL%Armor: Indestructible%NL%Shield: Indestructible}
 //////////////////////////////////////
 ////         Elite Items          ////
 //////////////////////////////////////
