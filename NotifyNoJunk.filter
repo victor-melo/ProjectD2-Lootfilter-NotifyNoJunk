@@ -200,8 +200,8 @@ ItemDisplay[rvl]:%PURPLE%%NAME%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %IL
 ////           Hide Junk          ////
 //////////////////////////////////////
 
-// Hide Arrows & Bolts past level 15
-ItemDisplay[(aqv CLVL>15) OR (cqv CLVL>15)]:{%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
+// Hide Arrows & Bolts past level 30 that are white or magic
+ItemDisplay[(aqv CLVL>15 AND (NMAG OR MAG)) OR (cqv CLVL>15 AND (NMAG OR MAG))]:{%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
 
 //// Hide Lower Quality Gems
 
@@ -237,10 +237,10 @@ ItemDisplay[CLVL>80 AND NMAG (NORM OR EXC) AND SOCK<2 AND !UNI AND !MAG AND !SET
 ItemDisplay[CLVL>80 AND NMAG AND SOCK=1 AND !UNI AND !MAG AND !SET AND !RARE AND !CRAFT AND !PRICE=35000]:{%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
 
 // Hide Mid tier gems eg: Ruby, Sapphire, etc
-ItemDisplay[CLVL>80 (gsv OR gsy OR gsb OR gsg OR gsr OR gsw OR sku)]:{%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
+//ItemDisplay[CLVL>80 (gsv OR gsy OR gsb OR gsg OR gsr OR gsw OR sku)]:{%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
 
 // Hide gold stacks that are less than 500 in hell difficulty
-ItemDisplay[CLVL>80 AND DIFF=2 AND GOLD<500]:
+//ItemDisplay[CLVL>80 AND DIFF=2 AND GOLD<500]:
 
 // Hide all normal ethereal belts, boots and Gloves
 ItemDisplay[ETH AND NMAG AND (BELT OR BOOTS OR GLOVES)]:
@@ -252,7 +252,7 @@ ItemDisplay[ETH AND NMAG AND (BELT OR BOOTS OR GLOVES)]:
 // The assumption here is once you hit level 90, you will want even more stuff filtered, like gold piles under 1000 gold
 
 // Hide gold stacks that are less than 1000 in hell difficulty
-ItemDisplay[CLVL>90 AND DIFF=2 AND GOLD<1000]:
+//ItemDisplay[CLVL>90 AND DIFF=2 AND GOLD<1000]:
 
 //////////////////////////////////////
 ////     Extra Notifications      ////
@@ -273,30 +273,36 @@ ItemDisplay[jew !ID]:%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level:
 //// Notify on all Rare Drops
 ItemDisplay[RARE !ID (rin OR amu OR jew OR ARMOR OR WEAPON OR CL1 OR CL2 OR CL3 OR CL4 OR CL5 OR CL6 OR CL7)]:%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
-// Notify on Project Diablo specific items (Not Maps)
-ItemDisplay[wss OR lbox OR dcho OR dcso OR dcbl OR dcma OR ubtm]:%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+// Notify on general purpose Project Diablo specific stuff
+ItemDisplay[wss OR lbox OR lpp OR jewf OR lsvl OR llmr OR rkey OR rtp OR rid OR cwss]:%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+
+// Notify on uber specific items (Not Maps)
+ItemDisplay[ubtm OR ubac OR ubab OR ubaa OR uba OR dcso OR dcbl OR dcma OR dcho OR rtma OR ubtm OR rtmv OR rtmo OR rtmf]:%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
 // Notify on Orb Drops
 ItemDisplay[imma OR imra OR upma OR scou OR rera OR upmp OR scrb]:%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
 // Notify on Map Drops
 // Tier 1
-ItemDisplay[NMAG AND (t11 OR t12 OR t13)]:%RED%*T1 %WHITE%%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[MAG AND (t11 OR t12 OR t13)]:%RED%*T1 %BLUE%%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[RARE AND (t11 OR t12 OR t13)]:%RED%*T1 %YELLOW%%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[NMAG AND (t11 OR t12 OR t13 OR t14 OR t15)]:%RED%*T1 %WHITE%%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[MAG AND (t11 OR t12 OR t13 OR t14 OR t15)]:%RED%*T1 %BLUE%%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[RARE AND (t11 OR t12 OR t13 OR t14 OR t15)]:%RED%*T1 %YELLOW%%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
 // Tier 2
-ItemDisplay[NMAG AND (t21 OR t22 OR t23 OR t24 OR t25)]:%RED%*T2 %WHITE%%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[MAG AND (t21 OR t22 OR t23 OR t24 OR t25)]:%RED%*T2 %BLUE%%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[RARE AND (t21 OR t22 OR t23 OR t24 OR t25)]:%RED%*T2 %YELLOW%%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[NMAG AND (t21 OR t22 OR t23 OR t24 OR t25 OR t26)]:%RED%*T2 %WHITE%%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[MAG AND (t21 OR t22 OR t23 OR t24 OR t25 OR t26)]:%RED%*T2 %BLUE%%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[RARE AND (t21 OR t22 OR t23 OR t24 OR t25 OR t26)]:%RED%*T2 %YELLOW%%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
 // Tier 3
-ItemDisplay[NMAG AND (t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37)]:%RED%*T3 %WHITE%%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[MAG AND (t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37)]:%RED%*T3 %BLUE%%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
-ItemDisplay[RARE AND (t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37)]:%RED%*T3 %YELLOW%%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[NMAG AND (t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39)]:%RED%*T3 %WHITE%%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[MAG AND (t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39)]:%RED%*T3 %BLUE%%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[RARE AND (t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39)]:%RED%*T3 %YELLOW%%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
 // Dungeon
-ItemDisplay[t41]:%RED%*DUNGEON %ORANGE%%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[t41 OR t42 OR t43]:%RED%*DUNGEON %ORANGE%%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+
+// PVP Arena
+ItemDisplay[t61 OR t62]:%RED%*PVP ARENA %ORANGE%%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
 // Notify on Key Drops
 ItemDisplay[pk1 OR pk2 OR pk3]: %ORANGE%%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
@@ -305,7 +311,7 @@ ItemDisplay[pk1 OR pk2 OR pk3]: %ORANGE%%NAME%%MAP-A5%{%WHITE%Sell Price: $%PRIC
 ItemDisplay[dhn OR bey OR mbr]: %NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
 // Notify on essence drops
-ItemDisplay[tes OR ceh OR bet OR fed]: %NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
+ItemDisplay[tes OR ceh OR bet OR fed OR toa]: %NAME%%MAP-A5%{%WHITE%Sell Price: $%PRICE% %NL% Item Level: %ILVL%}
 
 // ########################################## //
 //            Good Armor Bases                //

@@ -27,14 +27,12 @@ This filter has been tested with Season 2, newer seasons may or may not work.
 * Added socket recipes to elite white items
 
 ## Hide Junk
-* Hide Arrows & Bolts after reaching Level 15.
+* Hide normal and magic Arrows & Bolts after reaching Level 30.
 * Hide Chipped & Flawed gems after reaching level 50.
 * Hide Inferior items (Damaged, Cracked, etc..) except for class specific items (Druid Pelts, Sorc Wands, etc..).
 * Hide Throwing Potions (Fulminating Potion, Exploding Potion, Oil Potion, Strangling Potion, Choking Potion, Rancid Potion).
 * Hide Antidote, Thawing and stamina potion after level 50
 * Hide Most white items (Normal & Exceptional), all potions except Full Rejuvination potions, and 1 socket normal items once you hit level 80
-* Hide gold piles under $500 in Hell difficulty after reaching level 80
-* Hide gold piles under $1000 in Hell difficulty after reaching level 90
 
 ## Notifications and map icon on the following item drops:
 * All Unique
@@ -55,3 +53,6 @@ This filter has been tested with Season 2, newer seasons may or may not work.
 2. Open the Project Diablo 2 Launcher and press the "Item Filter Profiles" button.
 3. Select "Local", then double click "NotifyNoJunk.filter"
 4. If you see a "Config Saved" message, you are now ready to use the loot filter
+
+# Linux users
+If you are running PD2 on linux and having trouble getting the loot filter to work, I suggest using lutris-fshack-5.4-x86_64 runner. also, under Prefix architecture, try changing it to 32 bit
