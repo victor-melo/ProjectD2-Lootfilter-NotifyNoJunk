@@ -267,7 +267,7 @@ ItemDisplay[CLVL>80 AND DIFF=2 AND (rvs OR hp1 OR hp2 OR hp3 OR hp4 OR hp5 OR mp
 ItemDisplay[CLVL>80 AND NMAG (NORM OR EXC) AND SOCK<2 AND !UNI AND !MAG AND !SET AND !RARE AND !CRAFT AND !PRICE=35000 AND !leg AND !ear AND !std AND !tbk AND !ibk AND !CL1 AND !CL2 AND !CL5]:{%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
 
 // Hide All items with 1 socket
-ItemDisplay[CLVL>80 AND NMAG AND SOCK=1 AND !UNI AND !MAG AND !SET AND !RARE AND !CRAFT AND !PRICE=35000]:{%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
+ItemDisplay[CLVL>80 AND NMAG AND SOCK=1 AND !leg AND !UNI AND !MAG AND !SET AND !RARE AND !CRAFT AND !PRICE=35000]:{%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
 
 // Hide Mid tier gems eg: Ruby, Sapphire, etc
 //ItemDisplay[CLVL>80 (gsv OR gsy OR gsb OR gsg OR gsr OR gsw OR sku)]:{%NAME% %NL% %WHITE%Sell Price: $%PRICE%}
